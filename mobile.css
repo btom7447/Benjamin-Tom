@@ -29,7 +29,6 @@
         align-items: center;
         width: 40px;
         height: 40px;
-        z-index: 100;
     }
     .hamburgerMenu .bar {
         width: 30px;
