@@ -555,7 +555,7 @@ main .right-side .projects-section .portfolio-item.seventh {
 main .right-side .projects-section .modal {
     display: none;
     position: fixed;
-    z-index: 1;
+    z-index: 150;
     left: 0;
     top: 0;
     width: 100%;
@@ -568,7 +568,7 @@ main .right-side .projects-section .modal-content {
     padding: 30px;
     width: 70%;
     overflow: auto;
-    z-index: 150;
+    z-index: 155;
     border-radius: 5px;
 }
 main .right-side .projects-section .modal-content h4 {
