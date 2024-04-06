@@ -569,7 +569,7 @@ main .right-side .projects-section .modal-content {
     padding: 30px;
     width: 70%;
     overflow: auto;
-    z-index: 50;
+    z-index: 150;
     border-radius: 5px;
 }
 main .right-side .projects-section .modal-content h4 {
