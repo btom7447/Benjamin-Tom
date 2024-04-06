@@ -285,6 +285,7 @@
         width: 90%;
         height: 90vh;
         overflow-y: scroll;
+       z-index: 55;
     }
     main .right-side .projects-section .modal-content::-webkit-scrollbar {
         display: none;
