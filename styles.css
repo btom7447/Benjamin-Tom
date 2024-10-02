@@ -59,7 +59,27 @@ a {
     }
 }  
 
-
+.desktop-image {
+    display: block;
+}
+.mobile-image {
+    display: none;
+}
+.cursor-circle {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: solid 1px white;
+    background-color: rgba(192, 188, 188, 0.5);
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    transition: transform 0.1s ease-out; /* Smooth transition for movement */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add some shadow for effect */
+    z-index: 3000;
+}
+  
+  
 /* MOBILE */
 .hamburgerMenu {
     display: none;
@@ -263,7 +283,7 @@ main .right-side .home-section .mobile-socials a {
     background-color: tranparent;
     font-size: 16px;
     border: none;
-    border-radius: 5px;
+    border-radius: 4px;
     cursor: pointer;
     animation: bounce 0.5s infinite alternate;
 }
@@ -511,12 +531,12 @@ main .right-side .projects-section .portfolio-text p {
 main .right-side .projects-section .portfolio-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    grid-auto-rows: minmax(200px, auto);
+    grid-auto-rows: minmax(150px, auto);
     grid-gap: 30px; 
     padding: 50px;
 }
 main .right-side .projects-section .portfolio-item {
-    border-radius: 5px;
+    border-radius: 4px;
     background-color: var(--secondary-color-dark);
     cursor: pointer;
     position: relative;
@@ -525,35 +545,9 @@ main .right-side .projects-section .portfolio-item img,
 main .right-side .projects-section .portfolio-item video {
     width: 100%;
     height: 100%;
-    border-radius: 5px; 
+    border-radius: 4px; 
     object-fit: cover;
-}
-main .right-side .projects-section .portfolio-item.first {
-    grid-column-end: span 0;
-    grid-row-end: span 0;
-}
-main .right-side .projects-section .portfolio-item.second {
-    grid-column-end: span 0;
-    grid-row-end: span 0;
-}
-main .right-side .projects-section .portfolio-item.third {
-    grid-row-end: span 2;
-}
-main .right-side .projects-section .portfolio-item.fourth {
-    grid-column-end: span 2;
-    grid-row-end: span 1;
-}
-main .right-side .projects-section .portfolio-item.fifth {
-    grid-column-end: span 0;
-    grid-row-end: span 2;
-}
-main .right-side .projects-section .portfolio-item.sixth {
-    grid-column-end: span 2;
-    grid-row-end: span 1;
-}
-main .right-side .projects-section .portfolio-item.seventh {
-    grid-column-end: span 2;
-    grid-row-end: span 1;
+    object-position: top center;
 }
 
 
@@ -575,7 +569,7 @@ main .right-side .projects-section .modal-content {
     width: 70%;
     overflow: auto;
     z-index: 155;
-    border-radius: 5px;
+    border-radius: 4px;
 }
 main .right-side .projects-section .modal-content h4 {
     color: var(--primary-color-light);
@@ -594,7 +588,7 @@ main .right-side .projects-section .close {
 }
 main .right-side .projects-section .close:hover,
 main .right-side .projects-section .close:focus {
-    color: var(--primary-color-dark);
+    color: var(--highlight-color);
     text-decoration: none;
     cursor: pointer;
 }
@@ -617,7 +611,6 @@ main .right-side .project-modal-description .project-description-left video {
     width: 100%;
     height: 100%;
     object-fit: contain;
-
 }
 main .right-side .project-modal-description .project-description-right {
     width: 450px;
@@ -646,6 +639,9 @@ main .right-side .project-modal-description .project-description-right .bold {
 }
 main .right-side .project-modal-description .project-description-right a {
     text-decoration: none;
+}
+main .right-side .project-modal-description .project-description-right a:hover {
+    text-decoration: underline;
 }
 main .right-side .project-modal-description .project-details {
     width: 100%;
@@ -739,14 +735,14 @@ main .right-side .resume-section-container .education-container .education {
     justify-content: flex-start;
     align-items: flex-start;
     gap: 10px;
-    border-radius: 5px;
+    border-radius: 4px;
     background-color: var(--primary-color-dark);
 }
 main .right-side .education-container .education .date {
     background-color: #DC3545;
     color: var(--primary-color-light);
     padding: 10px;
-    border-radius: 10px;
+    border-radius: 4px;
     font-family: Figtree;
     font-size: 18px;
     margin-bottom: 10px;
@@ -838,13 +834,13 @@ main .right-side .resume-section .skills .skill {
     width: 100%;
     height: 10px; 
     background-color: var(--primary-color-dark);
-    border-radius: 5px; 
+    border-radius: 4px; 
     margin-top: 5px; 
 }
 main .right-side .resume-section .skills .skill-bar {
     height: 100%; 
     background-color: var(--highlight-color); 
-    border-radius: 5px; 
+    border-radius: 4px; 
 }
 main .right-side .resume-section .download-button {
     width: 100%;
@@ -949,7 +945,7 @@ main .right-side .testimonial-section .swiper-slide {
     background-color: var(--primary-color-dark);
     color: var(--primary-color-light);
     padding: 40px;
-    border-radius: 5px; 
+    border-radius: 4px; 
     cursor: grab;
 }
 main .right-side .testimonial-section .swiper-slide .testimonial {
@@ -1022,6 +1018,7 @@ main .right-side .testimonial-section .swiper-slide .ratings .fa-star.half:after
     color: #ffc107; 
 }
 main .right-side .testimonial-section .swiper-pagination {
+    top: 30px;
     width: fit-content;
     margin: auto;
     position: relative;
@@ -1114,7 +1111,7 @@ main .right-side .contact-section .contact-container form input {
     width: 100%;
     height: fit-content;
     padding: 20px;
-    border-radius: 5px;
+    border-radius: 4px;
     background-color: var(--secondary-background-dark);
     border: none;
     color: var(--primary-color-light);
@@ -1130,7 +1127,7 @@ main .right-side .contact-section .contact-container form textarea {
     width: 93%;
     height: fit-content;
     padding: 20px;
-    border-radius: 5px;
+    border-radius: 4px;
     background-color: var(--secondary-background-dark);
     border: none;
     color: var(--primary-color-light);
@@ -1210,7 +1207,7 @@ main .right-side .terms-modal-content {
     width: 70%;
     height: 80vh;
     overflow-y: scroll;
-    border-radius: 5px;
+    border-radius: 4px;
     z-index: 50;    
 }
 main .right-side .terms-modal-content::-webkit-scrollbar {

@@ -12,6 +12,7 @@
 </head>
 <body>
     <main>
+        <div class="cursor-circle"></div>
         <div class="mobile-header">
             <h5>Benjamin Tom</h5>
             <div class="hamburgerMenu" onclick="toggleSidebar()">
@@ -252,7 +253,7 @@
                     <div class="about-right">
                         <ul class="about-details">
                             <li><span class="bold">Name:</span> Benjamin Tom</li>
-                            <li><span class="bold">Email:</span> <span class="highlight" >tombenjamin7447@gmail.com</span></li>
+                            <li><span class="bold">Email:</span> <a href="mailto:tombenjamin7447@gmail.com" class="highlight">tombenjamin7447@gmail.com</a></li>
                             <li><span class="bold">From:</span> Akwa Ibom, Nigeria</li>
                         </ul>
                         <button type="button" class="download-cv" onclick="downloadCV()">Download CV</button>
@@ -277,21 +278,21 @@
                     <!-- YEARS EXPERIENCE -->
                     <div class="about-counts">
                         <div class="count">
-                            <h4 class="odometer" data-target="2">0</h4><span>+</span>
+                            <h4 class="odometer" data-target="3">0</h4><span>+</span>
                         </div>
                         <p>Years Experience</p>
                     </div>
                     <!-- HAPPY CLIENTS -->
                     <div class="about-counts">
                         <div class="count">
-                            <h4 class="odometer" data-target="8">0</h4><span>+</span>
+                            <h4 class="odometer" data-target="10">0</h4><span>+</span>
                         </div>
                         <p>Happy Clients</p>
                     </div>
                     <!-- PROJECTS DONE -->
                     <div class="about-counts">
                         <div class="count">
-                            <h4 class="odometer" data-target="12">0</h4><span>+</span>
+                            <h4 class="odometer" data-target="20">0</h4><span>+</span>
                         </div>
                         <p>Projects Done</p>
                     </div>
@@ -305,19 +306,14 @@
                 </div>
                 <div class="about-bio">
                     <p>
-                        My journey in web development commenced with mastering HTML, CSS, and JavaScript, swiftly advancing to encompass 
-                        frameworks like React and Bootstrap. Alongside these, I've honed skills in utilizing APIs and other tools vital 
-                        for front-end development. My dedication has fueled exponential growth, turning challenges into springboards for 
-                        advancement. Thriving on innovation, I eagerly embrace collaborations and learning experiences to continuously 
-                        elevate my skills.
+                        My journey in web development started with mastering the basics of HTML, CSS, and JavaScript, but as I gained confidence, I quickly transitioned into working with more advanced tools like React and Bootstrap. Alongside these, I developed a solid understanding of utilizing APIs and various front-end technologies essential for building dynamic web applications. Each challenge I encountered became a stepping stone for growth, allowing me to refine my skills and push the boundaries of what I could accomplish. This continuous evolution has shaped me into a more proficient developer, capable of taking on complex projects with a focus on innovation.
                     </p>
                     <p>
-                        Excited for the future, I'm poised to make waves in the dynamic realm of web development, transforming ideas into 
-                        impactful digital experiences through the power of code. Thank you for taking the time to accompany me through this 
-                        journey.
+                        As I look to the future, I'm excited about the limitless possibilities in the web development space. I’m eager to keep learning and collaborating, transforming creative ideas into impactful digital solutions. This drive to improve ensures that I stay at the forefront of emerging technologies, ready to turn concepts into polished experiences. Thank you for being part of my journey as I continue to grow and make my mark in this dynamic field.
                     </p>
                 </div>
             </div>
+
             <div id="projects" class="projects-section" >
                 <div class="section-caption">
                     <h1>PORTFOLIO</h1>
@@ -332,100 +328,179 @@
                     </p>
                 </div>
                 <div class="portfolio-container">
-                    <!-- HELLO WORLD -->
-                    <div class="portfolio-item first" onclick="openModal('hello-world-details')">
-                        <img src="images/hello-world.png" alt="hello world project">
+                     <!-- OAUTHC -->
+                     <div class="portfolio-item seventh" onclick="openModal('oauthc-details')">
+                        <img class="desktop-image" src="images/oauthc thumbnail.png" alt="oauthc website thumbnail">
+                        <img class="mobile-image" src="images/oauthc-mobile-thumbnail (1).png" alt="oauthc website thumbnail">
                     </div>
                     <!-- PROJECT MODAL -->
-                    <div id="hello-world-details" class="modal">
+                    <div id="oauthc-details" class="modal">
                         <div class="modal-content">
-                            <span class="close" onclick="document.getElementById('hello-world-details').style.display = 'none'">&times;</span>
-                            <h4>My first "Hello World"</h4>
+                            <span class="close" onclick="document.getElementById('oauthc-details').style.display = 'none'">&times;</span>
+                            <h4>Obafemi Awolowo University Teaching Hospital Website</h4>
                             <div class="project-modal-description">
                                 <div class="project-description-left">
-                                    <img src="images/hello-world.png" alt="First Hello World">
+                                    <img class="desktop-image" src="images/oauthc thumbnail.png" alt="oauthc thumbnail">
+                                    <img class="mobile-image" src="images/oauthc-mobile-thumbnail (2).png" alt="oauthc thumbnail">
                                 </div>
                                 <div class="project-description-right">
                                     <h5>Project Info:</h5>
                                     <p>
-                                        Where it all began, my very first foray into web development. With a few lines of HTML & CSS, I started my journey in the world of web creation.
+                                        Official website for Obafemi Awolowo University Teaching Hospital (OAUTHC). 
+                                        Providing comprehensive information about hospital services, medical staff, appointment scheduling, news updates, 
+                                        and resources for patients, visitors, and medical professionals.                                    
                                     </p>
                                     <h5>Project Details:</h5>
                                     <ul class="project-details">
-                                        <li><span class="bold">Client:</span>Personal project</li>
-                                        <li><span class="bold">Industry:</span>Web development</li>
-                                        <li><span class="bold">Technologies:</span>HTML</li>
-                                        <li><span class="bold">Date:</span>May, 2023</li>
-                                        <li><span class="bold">URL:</span><span class="highlight"><a href="https://btom7447.github.io/Hello-World/" target="_blank">https://btom7447.github.io/Hello-World/</a></span></li>
+                                        <li><span class="bold">Client:</span>OAUTHC</li>
+                                        <li><span class="bold">Industry:</span>Health</li>
+                                        <li><span class="bold">Technologies:</span>React, Typescript, Context API, Static API</li>
+                                        <li><span class="bold">Date:</span>September, 2024</li>
+                                        <li><span class="bold">URL:</span><span class="highlight"><a href="https://oauthc.gov.ng/" target="_blank">https://oauthc.gov.ng/</a></span></li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <!-- ROLE PLAY JAVASCRIPT GAME -->
-                    <div class="portfolio-item second" onclick="openModal('roleplay-details')">
-                        <img src="images/roleplay-portfolio.png" alt="Role play Java Script Game">
+
+                    <!-- OASIS ESTATES -->
+                    <div class="portfolio-item seventh" onclick="openModal('oasis-estates-details')">
+                        <img class="desktop-image" src="images/oasis-thumbnail.png" alt="Solus Real Estate Website Thumbnail">
+                        <img class="mobile-image" src="images/oasis-mobile-thumbnail.png" alt="Solus Real Estate Website Thumbnail">
                     </div>
                     <!-- PROJECT MODAL -->
-                    <div id="roleplay-details" class="modal">
+                    <div id="oasis-estates-details" class="modal">
                         <div class="modal-content">
-                            <span class="close" onclick="document.getElementById('roleplay-details').style.display = 'none'">&times;</span>
-                            <h4>A Role play JavaScript Game</h4>
+                            <span class="close" onclick="document.getElementById('oasis-estates-details').style.display = 'none'">&times;</span>
+                            <h4>Oasis Estates</h4>
                             <div class="project-modal-description">
                                 <div class="project-description-left">
-                                    <img src="images/roleplay-portfolio.png" alt="Role play Java Script Game">
+                                    <img class="desktop-image" src="images/oasis-thumbnail.png" alt="oasis-estate thumbnail">
+                                    <img class="mobile-image" src="images/oasis-mobile.png" alt="oasis-estate mobile thumbnail">
                                 </div>
                                 <div class="project-description-right">
                                     <h5>Project Info:</h5>
                                     <p>
-                                        Welcome to the Simple JS Choose-Your-Own-Adventure Game! This is a basic JavaScript project where you can create your own interactive text-based adventure.                                    </p>
+                                        Oasis Estate is a personal project consisting a user-friendly real estate platform connecting property owners, realtors, and buyers. It features centralized listings, profiles, advanced search, and secure payment processing, streamlining communication and sales. My goal is to revolutionize the real estate industry, providing a profitable experience for all parties.
+                                   
+                                    </p>
                                     <h5>Project Details:</h5>
                                     <ul class="project-details">
-                                        <li><span class="bold">Client:</span>Personal project</li>
-                                        <li><span class="bold">Industry:</span>Web development</li>
-                                        <li><span class="bold">Technologies:</span>HTML, CSS and JavaScript</li>
+                                        <li><span class="bold">Client:</span>Benjamin Tom (Me)</li>
+                                        <li><span class="bold">Industry:</span>Real Estate</li>
+                                        <li><span class="bold">Technologies:</span>React, Responsive Web Design, APIs (Static & Context)</li>
+                                        <li><span class="bold">Date:</span>January, 2024</li>
+                                        <li><span class="bold">URL:</span><span class="highlight"><a href="https://btom7447.github.io/Oasis-Estates/" target="_blank">https://btom7447.github.io/Oasis-Estates/</a></span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- PATARA HOTELS -->
+                    <div class="portfolio-item seventh" onclick="openModal('patara-hotels-details')">
+                        <img class="desktop-image" src="images/patara-thumbnail.png" alt="Patara Hotels Website Thumbnail">
+                        <img class="mobile-image" src="images/patara-mobile-thumbnail.png" alt="Patara Hotels Website Thumbnail">
+                    </div>
+                    <!-- PROJECT MODAL -->
+                    <div id="patara-hotels-details" class="modal">
+                        <div class="modal-content">
+                            <span class="close" onclick="document.getElementById('patara-hotels-details').style.display = 'none'">&times;</span>
+                            <h4>Patara Hotels</h4>
+                            <div class="project-modal-description">
+                                <div class="project-description-left">
+                                    <img class="desktop-image" src="images/patara-modal-thumbnail.png" alt="patara hotel thumbnail">
+                                    <img class="mobile-image" src="images/patara-modal-thumbnail-mobile.png" alt="patara hotel mobile thumbnail">
+                                </div>
+                                <div class="project-description-right">
+                                    <h5>Project Info:</h5>
+                                    <p>
+                                        A luxurious hotel website built with React, showcasing rooms, amenities & booking functionality. Features responsive design, API integration & seamless user experience.
+                                    </p>
+                                    <h5>Project Details:</h5>
+                                    <ul class="project-details">
+                                        <li><span class="bold">Client:</span>Patara Hotels</li>
+                                        <li><span class="bold">Industry:</span>Travel & Tourism</li>
+                                        <li><span class="bold">Technologies:</span>React, Responsive Web Design, Context API</li>
                                         <li><span class="bold">Date:</span>July, 2023</li>
-                                        <li><span class="bold">URL:</span><span class="highlight"><a href="https://btom7447.github.io/roleplay-game/" target="_blank">https://btom7447.github.io/roleplay-game/</a></span></li>
+                                        <li><span class="bold">URL:</span><span class="highlight"><a href="https://btom7447.github.io/patara-hotels/" target="_blank">https://btom7447.github.io/patara-hotels/</a></span></li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <!-- ABKON ENERGY -->
-                    <div class="portfolio-item third" onclick="openModal('abkon-energy-details')">
-                        <img src="images/Abkon Energy Portfolio (2).gif" alt="Abkon Energy Website Thumnbnail">
+
+                    <!-- ABKON PORTOFOLIO -->
+                    <div class="portfolio-item seventh" onclick="openModal('abkon-porfolio-details')">
+                        <img class="desktop-image" src="images/abkon-thumbnail.png" alt="abkon portfolio Website Thumbnail">
+                        <img class="mobile-image" src="images/abkon-portfolio-mobile.png" alt="abkon portfolio Website Thumbnail">
                     </div>
                     <!-- PROJECT MODAL -->
-                    <div id="abkon-energy-details" class="modal">
+                    <div id="abkon-porfolio-details" class="modal">
                         <div class="modal-content">
-                            <span class="close" onclick="document.getElementById('abkon-energy-details').style.display = 'none'">&times;</span>
-                            <h4>Abkon Energy</h4>
+                            <span class="close" onclick="document.getElementById('abkon-porfolio-details').style.display = 'none'">&times;</span>
+                            <h4>Abkon Portfolio</h4>
                             <div class="project-modal-description">
                                 <div class="project-description-left">
-                                    <img src="images/Abkon Energy Portfolio (2).gif" alt="Abkon Energy Website Thumnbnail">
+                                    <img class="desktop-image" src="images/abkon-modal-thumbnail.png" alt="abkon portfolio thumbnail">
+                                    <img class="mobile-image" src="images/abkon-modal-thumbnail-mobile.png" alt="abkon portfolio mobile thumbnail">
                                 </div>
                                 <div class="project-description-right">
                                     <h5>Project Info:</h5>
                                     <p>
-                                        Abkon Energy" is a dynamic and innovative project that reflects my passion for sustainable 
-                                        energy solutions and clean technology. In this endeavor, I've created a website for Abkon Energy, 
-                                        a fictional clean energy company dedicated to shaping a greener future.
+                                        Showcasing Abkon's brand design expertise through a curated selection of projects, highlighting our passion for creating visually stunning and effective brand identities.
                                     </p>
                                     <h5>Project Details:</h5>
                                     <ul class="project-details">
-                                        <li><span class="bold">Client:</span>Abkon PLC</li>
-                                        <li><span class="bold">Industry:</span>Solar & Electricals</li>
-                                        <li><span class="bold">Technologies:</span>HTML, CSS & JavaScript</li>
-                                        <li><span class="bold">Date:</span>August, 2023</li>
-                                        <li><span class="bold">URL:</span><span class="highlight"><a href="https://btom7447.github.io/AbkonEnergy/" target="_blank">https://btom7447.github.io/AbkonEnergy/</a></span></li>
+                                        <li><span class="bold">Client:</span>Abkon</li>
+                                        <li><span class="bold">Industry:</span>Design</li>
+                                        <li><span class="bold">Technologies:</span>React, JavaScript, Responsive Web Design</li>
+                                        <li><span class="bold">Date:</span>May, 2023</li>
+                                        <li><span class="bold">URL:</span><span class="highlight"><a href="https://abkon.netlify.app" target="_blank">https://abkon.netlify.app</a></span></li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
                     </div>
+
+                    <!-- SOLUS REAL ESATE -->
+                    <div class="portfolio-item seventh" onclick="openModal('solus-estates-details')">
+                        <img class="desktop-image" src="images/solus estates.png" alt="solus estates Website Thumbnail">
+                        <img class="mobile-image" src="images/solus-estate-thumbnail.png" alt="solus estates Website Thumbnail">
+                    </div>
+                    <!-- PROJECT MODAL -->
+                    <div id="solus-estates-details" class="modal">
+                        <div class="modal-content">
+                            <span class="close" onclick="document.getElementById('solus-estates-details').style.display = 'none'">&times;</span>
+                            <h4>Solus Real Estate</h4>
+                            <div class="project-modal-description">
+                                <div class="project-description-left">
+                                    <img class="desktop-image" src="images/solus-modal-thumbnail.png" alt="solus estates Website Thumbnail">
+                                    <img class="mobile-image" src="images/solus-estate-modal-thumbnail.png" alt="solus estates Website Thumbnail">            
+                                </div>
+                                <div class="project-description-right">
+                                    <h5>Project Info:</h5>
+                                    <p>
+                                        A glimpse of the innovative real estate website I developed for a startup in the real estate industry. Designed to offer a seamless and visually 
+                                        captivating experience for property enthusiasts, this project showcases my skills in front-end development. I aimed to revolutionize the way users engage with real estate listings.
+                                    </p>
+                                    <h5>Project Details:</h5>
+                                    <ul class="project-details">
+                                        <li><span class="bold">Client:</span>Solus Estates</li>
+                                        <li><span class="bold">Industry:</span>Real Estate</li>
+                                        <li><span class="bold">Technologies:</span>HTML, CSS, Bootstrap & JavaScript</li>
+                                        <li><span class="bold">Date:</span>November, 2019</li>
+                                        <li><span class="bold">URL:</span><span class="highlight"><a href="https://btom7447.github.io/Solus-Estates/" target="_blank">https://btom7447.github.io/Solus-Estates//</a></span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                     <!-- ABKON LAUNDRY -->
-                    <div class="portfolio-item fourth" onclick="openModal('abkon-laundry-details')">
-                        <img src="images/AbkonLaundryPortfolio.gif" alt="Abkon Laundry Website Thumbnail">
+                    <div class="portfolio-item" onclick="openModal('abkon-laundry-details')">
+                        <img class="desktop-image" src="images/abkon-laundry thumbnail.png" alt="abkon laundry Website Thumbnail">
+                        <img class="mobile-image" src="images/abkon-laundry-thumbnail-mobile.png" alt="abkon laundry Website Thumbnail">            
                     </div>
                     <!-- PROJECT MODAL -->
                     <div id="abkon-laundry-details" class="modal">
@@ -434,7 +509,8 @@
                             <h4>Abkon Laundary</h4>
                             <div class="project-modal-description">
                                 <div class="project-description-left">
-                                    <img src="images/AbkonLaundryPortfolio.gif" alt="Abkon Laundry Website Thumbnail">
+                                    <img class="desktop-image" src="images/abkon-laundry-modal-thumbnail.png" alt="abkon laundry Website Thumbnail">
+                                    <img class="mobile-image" src="images/abkon-laundry-modal-mobile.png" alt="abkon laundry Website Thumbnail">            
                                 </div>
                                 <div class="project-description-right">
                                     <h5>Project Info:</h5>
@@ -454,41 +530,11 @@
                             </div>
                         </div>
                     </div>
-                    <!-- LIMNAH SERVICES -->
-                    <div class="portfolio-item fifth" onclick="openModal('limnah-details')">
-                        <img src="images/Limnah portfolios.gif" alt="Limnah Website Thumbnail">
-                    </div>
-                    <!-- PROJECT MODAL -->
-                    <div id="limnah-details" class="modal">
-                        <div class="modal-content">
-                            <span class="close" onclick="document.getElementById('limnah-details').style.display = 'none'">&times;</span>
-                            <h4>Limnah Restaurant</h4>
-                            <div class="project-modal-description">
-                                <div class="project-description-left">
-                                    <img src="images/Limnah portfolios.gif" alt="Limnah Website Thumbnail">
-                                </div>
-                                <div class="project-description-right">
-                                    <h5>Project Info:</h5>
-                                    <p>
-                                        Welcome to "Limnah Restaurant," an immersive culinary experience brought to life through this web project. 
-                                        Limnah is an imaginary restaurant that combines exquisite cuisine with a charming atmosphere, and this website 
-                                        is designed to showcase its unique offerings.
-                                    </p>
-                                    <h5>Project Details:</h5>
-                                    <ul class="project-details">
-                                        <li><span class="bold">Client:</span>Limnah Services</li>
-                                        <li><span class="bold">Industry:</span>Catering</li>
-                                        <li><span class="bold">Technologies:</span>HTML, CSS & JavaScript</li>
-                                        <li><span class="bold">Date:</span>September 2019</li>
-                                        <li><span class="bold">URL:</span><span class="highlight"><a href="https://btom7447.github.io/Limnah-Restaurant/" target="_blank">https://btom7447.github.io/Limnah-Restaurant/</a></span></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+
                     <!-- LOSANGELES  -->
                     <div class="portfolio-item sixth" onclick="openModal('losangeles-portfolio-details')">
-                        <img src="images/losangelesPortfolio.gif" alt="Losangeles Mountain Website Thumbnail">
+                        <img class="desktop-image" src="images/losangele-thumbnail.png" alt="losangeles Website Thumbnail">
+                        <img class="mobile-image" src="images/losangeles-thumbnail-mobile.png" alt="losangeles Website Thumbnail">            
                     </div>
                     <!-- PROJECT MODAL -->
                     <div id="losangeles-portfolio-details" class="modal">
@@ -497,7 +543,8 @@
                             <h4>Losangeles Mountains</h4>
                             <div class="project-modal-description">
                                 <div class="project-description-left">
-                                    <img src="images/losangelesPortfolio.gif" alt="Losangeles Mountain Website Thumbnail">
+                                    <img class="desktop-image" src="images/loasangeles-modal-thumbnail.png" alt="losangeles Website Thumbnail">
+                                    <img class="mobile-image" src="images/losangeles-modal-mobile.png" alt="losangeles Website Thumbnail"> 
                                 </div>
                                 <div class="project-description-right">
                                     <h5>Project Info:</h5>
@@ -518,32 +565,104 @@
                             </div>
                         </div>
                     </div>
-                    <!-- SOLUS REAL ESATE -->
-                    <div class="portfolio-item seventh" onclick="openModal('solus-estates-details')">
-                        <img src="images/Solu Real Estate.gif" alt="Solus Real Estate Website Thumbnail">
+
+                    <!-- LIMNAH SERVICES -->
+                    <div class="portfolio-item" onclick="openModal('limnah-details')">
+                        <img class="desktop-image" src="images/limnah-restaurant (1).png" alt="limnah restaurant Website Thumbnail">
+                        <img class="mobile-image" src="images/limnah-restaurant (2).png" alt="limnah restaurant Website Thumbnail"> 
                     </div>
                     <!-- PROJECT MODAL -->
-                    <div id="solus-estates-details" class="modal">
+                    <div id="limnah-details" class="modal">
                         <div class="modal-content">
-                            <span class="close" onclick="document.getElementById('solus-estates-details').style.display = 'none'">&times;</span>
-                            <h4>Solus Real Estate</h4>
+                            <span class="close" onclick="document.getElementById('limnah-details').style.display = 'none'">&times;</span>
+                            <h4>Limnah Restaurant</h4>
                             <div class="project-modal-description">
                                 <div class="project-description-left">
-                                    <img src="images/Solu Real Estate.gif" alt="Solus Real Estate Website Thumbnail">
+                                    <img class="desktop-image" src="images/limnah-restaurant (4).png" alt="limnah restaurant Website Thumbnail">
+                                    <img class="mobile-image" src="images/limnah-restaurant (3).png" alt="limnah restaurant Website Thumbnail"> 
                                 </div>
                                 <div class="project-description-right">
                                     <h5>Project Info:</h5>
                                     <p>
-                                        A glimpse of the innovative real estate website I developed for a startup in the real estate industry. Designed to offer a seamless and visually 
-                                        captivating experience for property enthusiasts, this project showcases my skills in front-end development. I aimed to revolutionize the way users engage with real estate listings.
+                                        Welcome to "Limnah Restaurant," an immersive culinary experience brought to life through this web project. 
+                                        Limnah is an imaginary restaurant that combines exquisite cuisine with a charming atmosphere, and this website 
+                                        is designed to showcase its unique offerings.
                                     </p>
                                     <h5>Project Details:</h5>
                                     <ul class="project-details">
-                                        <li><span class="bold">Client:</span>Solus Estates</li>
-                                        <li><span class="bold">Industry:</span>Real Estate</li>
-                                        <li><span class="bold">Technologies:</span>HTML, CSS, Bootstrap & JavaScript</li>
-                                        <li><span class="bold">Date:</span>November, 2019</li>
-                                        <li><span class="bold">URL:</span><span class="highlight"><a href="https://btom7447.github.io/Solus-Estates/" target="_blank">https://btom7447.github.io/Solus-Estates//</a></span></li>
+                                        <li><span class="bold">Client:</span>Limnah Services</li>
+                                        <li><span class="bold">Industry:</span>Catering</li>
+                                        <li><span class="bold">Technologies:</span>HTML, CSS & JavaScript</li>
+                                        <li><span class="bold">Date:</span>September 2019</li>
+                                        <li><span class="bold">URL:</span><span class="highlight"><a href="https://btom7447.github.io/Limnah-Restaurant/" target="_blank">https://btom7447.github.io/Limnah-Restaurant/</a></span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ABKON ENERGY -->
+                    <div class="portfolio-item" onclick="openModal('abkon-energy-details')">
+                        <img class="desktop-image" src="images/abkon-energy (1).png" alt="abkon-energy Website Thumbnail">
+                        <img class="mobile-image" src="images/abkon-energy (4).png" alt="abkon-energy Website Thumbnail"> 
+                    </div>
+                    <!-- PROJECT MODAL -->
+                    <div id="abkon-energy-details" class="modal">
+                        <div class="modal-content">
+                            <span class="close" onclick="document.getElementById('abkon-energy-details').style.display = 'none'">&times;</span>
+                            <h4>Abkon Energy</h4>
+                            <div class="project-modal-description">
+                                <div class="project-description-left">
+                                    <img class="desktop-image" src="images/abkon-energy (2).png" alt="abkon-energy Website Thumbnail">
+                                    <img class="mobile-image" src="images/abkon-energy (3).png  " alt="abkon-energy Website Thumbnail"> 
+                                </div>
+                                <div class="project-description-right">
+                                    <h5>Project Info:</h5>
+                                    <p>
+                                        Abkon Energy" is a dynamic and innovative project that reflects my passion for sustainable 
+                                        energy solutions and clean technology. In this endeavor, I've created a website for Abkon Energy, 
+                                        a fictional clean energy company dedicated to shaping a greener future.
+                                    </p>
+                                    <h5>Project Details:</h5>
+                                    <ul class="project-details">
+                                        <li><span class="bold">Client:</span>Abkon PLC</li>
+                                        <li><span class="bold">Industry:</span>Solar & Electricals</li>
+                                        <li><span class="bold">Technologies:</span>HTML, CSS & JavaScript</li>
+                                        <li><span class="bold">Date:</span>August, 2023</li>
+                                        <li><span class="bold">URL:</span><span class="highlight"><a href="https://btom7447.github.io/AbkonEnergy/" target="_blank">https://btom7447.github.io/AbkonEnergy/</a></span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- HELLO WORLD -->
+                    <div class="portfolio-item" onclick="openModal('hello-world-details')">
+                        <img class="desktop-image" src="images/Screenshot 2024-10-02 161240.png" alt="hello world Thumbnail">
+                        <img class="mobile-image" src="images/Screenshot 2024-10-02 161252.png " alt="hello world Website Thumbnail"> 
+                    </div>
+                    <!-- PROJECT MODAL -->
+                    <div id="hello-world-details" class="modal">
+                        <div class="modal-content">
+                            <span class="close" onclick="document.getElementById('hello-world-details').style.display = 'none'">&times;</span>
+                            <h4>My first "Hello World"</h4>
+                            <div class="project-modal-description">
+                                <div class="project-description-left">
+                                    <img class="desktop-image" src="images/Screenshot 2024-10-02 161240.png" alt="hello world Thumbnail">
+                                    <img class="mobile-image" src="images/Screenshot 2024-10-02 161252.png " alt="hello world Website Thumbnail"> 
+                                </div>
+                                <div class="project-description-right">
+                                    <h5>Project Info:</h5>
+                                    <p>
+                                        Where it all began, my very first foray into web development. With a few lines of HTML & CSS, I started my journey in the world of web creation.
+                                    </p>
+                                    <h5>Project Details:</h5>
+                                    <ul class="project-details">
+                                        <li><span class="bold">Client:</span>Personal project</li>
+                                        <li><span class="bold">Industry:</span>Web development</li>
+                                        <li><span class="bold">Technologies:</span>HTML</li>
+                                        <li><span class="bold">Date:</span>May, 2023</li>
+                                        <li><span class="bold">URL:</span><span class="highlight"><a href="https://btom7447.github.io/Hello-World/" target="_blank">https://btom7447.github.io/Hello-World/</a></span></li>
                                     </ul>
                                 </div>
                             </div>
@@ -551,6 +670,7 @@
                     </div>
                 </div>                
             </div>
+            
             <div id="resume" class="resume-section">
                 <div class="section-caption">
                     <h1>SUMMARY</h1>
@@ -1030,8 +1150,6 @@
                 <div class="shadow"></div>
                 </div>
             </div>
-            <!-- BACK TO THE TOP BUTTON -->
-            <!-- <button id="scrollToTopButton"><i class="fas fa-chevron-up"></i></button> -->
         </section>
 
         <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
@@ -1303,27 +1421,30 @@
             });
         </script>
         
-        <!-- SCROLL TO THE TOP  -->
+        <!-- CURSOR MOVEMENT -->
         <script>
-            document.addEventListener('DOMContentLoaded', function() {
-                const scrollToTopButton = document.getElementById('scrollToTopButton');
-        
-                window.addEventListener('scroll', function() {
-                    if (window.pageYOffset > 100) {
-                        scrollToTopButton.style.display = 'block';
-                    } else {
-                        scrollToTopButton.style.display = 'none';
-                    }
-                });
-        
-                scrollToTopButton.addEventListener('click', function() {
-                    window.scrollTo({
-                        top: 0,
-                        behavior: 'smooth'
-                    });
-                });
+            const circle = document.querySelector('.cursor-circle');
+                let mouseX = 0, mouseY = 0;
+                let circleX = 0, circleY = 0;
+
+                const animateCircle = () => {
+                    const speed = 0.1; // Control the smoothness, higher is snappier
+                    circleX += (mouseX - circleX) * speed;
+                    circleY += (mouseY - circleY) * speed;
+                    
+                    circle.style.transform = `translate(${circleX - 20}px, ${circleY - 20}px)`; // Keep it centered
+                    requestAnimationFrame(animateCircle);
+                };
+
+                document.addEventListener('mousemove', (e) => {
+                    mouseX = e.pageX;
+                    mouseY = e.pageY;
             });
+
+            animateCircle(); // Start the animation loop
         </script>
+
+       
     </main>
 </body>
 </html>

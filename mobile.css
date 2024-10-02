@@ -1,6 +1,11 @@
 /* MOBILE (SMALL - LARGE) */
 @media (max-width: 480px) {
-   
+    .desktop-image {
+        display: none;
+    }
+    .mobile-image {
+        display: block;
+    }
     .mobile-header {
         position: fixed;
         top: 0;
@@ -282,9 +287,9 @@
     }
     main .right-side .projects-section .portfolio-container {
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(47px, 1fr));
-        grid-auto-rows: minmax(80px, auto);
-        grid-gap: 10px; 
+        grid-template-columns: 1fr;
+        grid-auto-rows: minmax(400px, auto);
+        grid-gap: 30px; 
         padding: 20px;
     }
 
@@ -302,10 +307,10 @@
     }
     main .right-side .projects-section .modal-content h4 {
         font-size: 20px;
-        margin-bottom: 10px;
+        margin-bottom: 30px;
     }
     main .right-side .projects-section .close {
-        font-size: 25px;
+        font-size: 40px;
     }
     main .right-side .projects-section .project-modal-description {
         width: 100%;
@@ -315,7 +320,7 @@
     }
     main .right-side .project-modal-description .project-description-left {
         width: 100%;
-        height: 200px;
+        height: auto;
     }
     main .right-side .project-modal-description .project-description-left img, 
     main .right-side .project-modal-description .project-description-left video {
