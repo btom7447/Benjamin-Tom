@@ -146,7 +146,7 @@
     }
     /* HOME SECTION */
     main .right-side .home-section {
-        height: 100vh;
+        height: 100dvh;
     }
     main .right-side .home-section .home-section-container h4 {
         font-size: 20px;
