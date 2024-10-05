@@ -6,6 +6,8 @@
     <link rel="icon" type="image/jpg" href="/images/logo.png">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="mobile.css">
     <title>Benjamin Tom</title>
@@ -167,6 +169,9 @@
 
         <!-- RIGHT SECTION -->
         <section class="right-side">
+            <div id="progress" class="progress">
+                <span id="progress-value"><i class="fas fa-chevron-up"></i></span>
+            </div>
             <!-- HOME SECTION -->
             <div id="home" class="home-section">
                 <div class="home-section-container">
@@ -229,18 +234,12 @@
                     </div>
                 </div>
                 <div class="bouncing-container">
-                    <button class="bouncing-button">
-                        <a href="#about">
-                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="20" height="20" viewBox="0 0 256 256" xml:space="preserve">
-                                <defs>
-                                </defs>
-                                <g style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;" transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)" >
-                                    <polygon points="45,69.52 0,30.25 8.52,20.48 45,52.31 81.48,20.48 90,30.25 " style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: #FFF; fill-rule: nonzero; opacity: 1;" transform="  matrix(1 0 0 1 0 0) "/>
-                                </g>
-                            </svg>
-                        </a>
-                    </button>
-                </div>
+                    <div class="scroll-indicator">
+                      <span class="mouse">
+                        <span class="scroll-wheel"></span>
+                      </span>
+                    </div>
+                </div>                  
             </div>
             <!-- ABOUT SECTION -->
             <div id="about" class="about-section">
@@ -323,7 +322,7 @@
                 <div class="portfolio-text">
                     <p>
                         Here, I've condensed my learning and progress into a series of projects that span from my very first line of code as 
-                        a novie to my most recent creations as an aspiring web developer. From foundational HTML and CSS to dynamic JavaScript and frameworks. 
+                        a novice to my most recent creations as an aspiring web developer. From foundational HTML and CSS to dynamic JavaScript and frameworks like react & Typescript. 
                         Each project is a snippet of my growth.
                     </p>
                 </div>
@@ -1150,10 +1149,42 @@
                 <div class="shadow"></div>
                 </div>
             </div>
+
         </section>
 
         <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-        
+
+        <!-- SCROLL PROGRESS AND SCROLL TO TOP -->
+        <script>
+            let calcScrollValue = () => {
+            let scrollProgress = document.getElementById("progress");
+            let progressValue = document.getElementById("progress-value");
+            let rightSide = document.querySelector('.right-side'); // Select the right-side section
+
+            let pos = rightSide.scrollTop; // Get the scroll position of the right-side section
+            let calcHeight = rightSide.scrollHeight - rightSide.clientHeight; // Calculate the scrollable height of right-side
+            let scrollValue = Math.round((pos * 100) / calcHeight);
+
+            if (pos > 100) {
+                scrollProgress.style.display = "grid";
+            } else {
+                scrollProgress.style.display = "none";
+            }
+
+            // Scroll to top of right-side section when progress bar is clicked
+            scrollProgress.addEventListener("click", () => {
+                rightSide.scrollTop = 0;
+            });
+
+            // Update the background of the progress indicator
+            scrollProgress.style.background = `conic-gradient(#7f6ff3 ${scrollValue}%, #fff ${scrollValue}%)`;
+            };
+
+            // Set up scroll event listener for right-side section
+            let rightSide = document.querySelector('.right-side');
+            rightSide.onscroll = calcScrollValue;
+            window.onload = calcScrollValue;
+        </script>
         <!-- TYPEWRITER EFFECT (LANDING PAGE) -->
         <script>
             // TYPE EFFECT OF THE LANDING PAGE
@@ -1443,8 +1474,6 @@
 
             animateCircle(); // Start the animation loop
         </script>
-
-       
     </main>
 </body>
 </html>
