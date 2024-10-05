@@ -602,8 +602,6 @@ main .right-side .projects-section .portfolio-item:hover::after {
     background-color: rgba(126, 111, 243, 0.537); 
 }
 
-
-
 /* PROJECT DESCRIPTION MODAL */
 main .right-side .projects-section .modal {
     display: none;

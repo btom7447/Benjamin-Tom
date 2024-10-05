@@ -1,5 +1,21 @@
 /* MOBILE (SMALL - LARGE) */
 @media (max-width: 480px) {
+    /* SCROLL PROGRESS */
+    #progress {
+        bottom: 10px;
+        right: 10px;
+        height: 40px;
+        width: 40px;
+    }
+    #progress-value {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: calc(100% - 4px);
+        width: calc(100% - 4px);
+        font-size: 12px;
+    }
     .desktop-image {
         display: none;
     }
