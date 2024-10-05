@@ -245,6 +245,9 @@
         margin-top: 10px;
         font-size: 16px;
     }
+    main #shareButton {
+        width: fit-content;
+    }
     main .right-side .about-section .about-count-container {
         width: 100%;
         flex-direction: row;

@@ -252,10 +252,14 @@
                     <div class="about-right">
                         <ul class="about-details">
                             <li><span class="bold">Name:</span> Benjamin Tom</li>
+                            <li><span class="bold">Phone:</span> <a href="tel:+2349134876624" class="highlight">+234 913 487 6624</a></li>
                             <li><span class="bold">Email:</span> <a href="mailto:tombenjamin7447@gmail.com" class="highlight">tombenjamin7447@gmail.com</a></li>
                             <li><span class="bold">From:</span> Akwa Ibom, Nigeria</li>
-                        </ul>
-                        <button type="button" class="download-cv" onclick="downloadCV()">Download CV</button>
+                        </ul>                          
+                        <div class="know-more-buttons">
+                            <button type="button" class="download-cv" onclick="downloadCV()">Download CV</button>
+                            <button type="button" class="hire-me" id="shareButton" style="max-width: 200px;">Share CV</button>
+                        </div>
                     </div>
                     <div class="about-left">
                         <h5>I'm <span class="highlight">Benjamin Tom, </span>a Web Developer</h5>
@@ -682,7 +686,7 @@
                         <h3>My Education</h3>
                         <div class="education">
                             <div class="date">
-                                <h6>2023 - 2025</h6>
+                                <h6>2023 - 2026</h6>
                             </div>
                             <h3>Software Development</h3>
                             <h4>Bachelors Degree</h4>
@@ -695,7 +699,7 @@
                         </div>
                         <div class="education">
                             <div class="date">
-                                <h6>2023 - 2024</h6>
+                                <h6>2024 - 2025</h6>
                             </div>
                             <h3>Web & Computer Programming</h3>
                             <h4>Certificate</h4>
@@ -704,6 +708,17 @@
                                 Upon attaining my web and computer programming certificate, I aspire to hone my skills in programming languages and frameworks, enabling me 
                                 to create dynamic websites and applications. This accomplishment will open doors to rewarding career opportunities in frontend or backend 
                                 development, propelling me towards impactful contributions to innovative digital ventures.                            
+                            </p>
+                        </div>
+                        <div class="education">
+                            <div class="date">
+                                <h6>July, 2024</h6>
+                            </div>
+                            <h3>PathywayConnect</h3>
+                            <h4>Certificate</h4>
+                            <h5>Brigham Young University</h5>
+                            <p>
+                                I was awarded the PathwayConnect Certificate after completing a three-term (21-week) program focused on developing essential life skills, including English, algebra, and personal finance. This program provided me with a strong foundation for my higher education in Brigham Young University.
                             </p>
                         </div>
                         <div class="education">
@@ -724,9 +739,19 @@
                         <h3>My Experience</h3>
                         <div class="education">
                             <div class="date">
+                                <h6>June - September, 2024</h6>
+                            </div>
+                            <h3>Frontend Web Developer - Contract</h3>
+                            <h5>Obafemi Awolowo University Teaching Hospital (OAUTHC)</h5>
+                            <p>
+                                As a Front-End Developer for the OAUTHC website, I built a responsive, dynamic site using React and TypeScript. I focused on user experience, leveraging the Context API for state management and integrating RESTful APIs for data retrieval. I collaborated with designers and back-end teams to create a visually appealing interface, optimized performance, and ensured cross-device/browser compatibility through testing and debugging.
+                            </p>
+                        </div>
+                        <div class="education">
+                            <div class="date">
                                 <h6>September, 2023 - April, 2024</h6>
                             </div>
-                            <h3>Front-end Web Developer</h3>
+                            <h3>Frontend Web Developer - Full Time</h3>
                             <h5>CyberBuddies</h5>
                             <p>
                                 In my role at CyberBuddies, I enhanced user experiences on our social marketing platforms, collaborated with teams, and translated design
@@ -737,7 +762,7 @@
                             <div class="date">
                                 <h6>2023 - 2024</h6>
                             </div>
-                            <h3>Freelance Web Developer</h3>
+                            <h3>Frontend Web Developer - Freelance</h3>
                             <h5>Freelance platforms</h5>
                             <p>
                                 As a Freelance Frontend Web Developer, I specialize in crafting visually stunning and highly functional websites, establishing design standards, 
@@ -749,7 +774,7 @@
                             <div class="date">
                                 <h6>April - September, 2023</h6>
                             </div>
-                            <h3>Intern</h3>
+                            <h3>Frontend Web Developer - Intern</h3>
                             <h5>Bestman Computers</h5>
                             <p>
                                 I was responsible for creating code user-side applications, including visual elements like menu bars, clickable buttons, and the overall layout of websites or web applications. My duties also included communicating with clients to identify their needs, optimizing websites for different formats like desktops and mobile phones, and running tests to ensure code strings perform the correct functions.                            </p>
@@ -809,6 +834,16 @@
                             </div>
                             <div class="skill">
                                 <div class="skill-bar" style="width: 70%;"></div>
+                            </div>
+                        </div>
+                        <!-- TYPESCRIPT -->
+                        <div class="skills">
+                            <div class="skills-caption">
+                                <h5>TypeScript</h5>
+                                <h5>50%</h5>
+                            </div>
+                            <div class="skill">
+                                <div class="skill-bar" style="width: 50%;"></div>
                             </div>
                         </div>
                         
@@ -1186,6 +1221,30 @@
             rightSide.onscroll = calcScrollValue;
             window.onload = calcScrollValue;
         </script>
+
+        <!-- SHARE API -->
+        <script>
+            document.getElementById('shareButton').addEventListener('click', async () => {
+                try {
+                    const response = await fetch('/doc/Benjamin-Tom-Resume.pdf');
+                    const blob = await response.blob(); 
+                    const file = new File([blob], 'benjamin-tom-cv.pdf', { type: 'application/pdf' }); // Create a File object
+                    
+                    if (navigator.share) {
+                        await navigator.share({
+                            title: "Check out Benjamin's CV",
+                            text: "Here’s Benjamin's CV. Feel free to share it!",
+                            files: [file],
+                        });
+                        console.log('Successfully shared');
+                    } else {
+                        alert('Sharing is not supported on this browser');
+                    }
+                } catch (error) {
+                    console.error('Error sharing:', error);
+                }
+            });
+        </script>              
 
         <!-- TYPEWRITER EFFECT (LANDING PAGE) -->
         <script>
