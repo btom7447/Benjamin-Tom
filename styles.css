@@ -73,8 +73,8 @@ a {
     position: fixed;
     bottom: 80px;
     right: 30px;
-    height: 70px;
-    width: 70px;
+    height: 60px;
+    width: 60px;
     display: none;
     place-items: center;
     border-radius: 50%;
