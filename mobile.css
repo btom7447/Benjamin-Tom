@@ -833,7 +833,7 @@
         margin: 10% auto;
         padding: 20px;
         width: 85%;
-        height: 80vh;
+        height: 80dvh;
         overflow-y: scroll;
     }
     main .right-side .projects-section .modal-content::-webkit-scrollbar {
