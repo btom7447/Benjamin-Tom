@@ -73,7 +73,7 @@
         display: none;
         background-color: var(--primary-color-dark);
         width: 250px;
-        height: 100vh;
+        height: 100dvh;
         padding: 20px;
         overflow-y: scroll;
         display: flex;
