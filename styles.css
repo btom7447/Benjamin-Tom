@@ -1241,6 +1241,9 @@ main .right-side .copy-right-section h6 {
 main .right-side .copy-right-section span {
     cursor: pointer;
 }
+main .right-side .copy-right-section span:hover {
+    color: var(--highlight-color);
+}
 /* TERMS MODAL */
 main .right-side .terms-modal {
     display: none; 
@@ -1278,13 +1281,13 @@ main .right-side .disclaimer-close {
 }
 main .right-side .privacy-close:hover,
 main .right-side .privacy-close:focus {
-    color: var(--primary-color-dark);
+    color: var(--highlight-color);
     text-decoration: none;
     cursor: pointer;
 }
 main .right-side .disclaimer-close:hover,
 main .right-side .disclaimer-close:focus {
-    color: var(--primary-color-dark);
+    color: var(--highlight-color);
     text-decoration: none;
     cursor: pointer;
 }
