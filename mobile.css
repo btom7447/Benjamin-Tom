@@ -440,6 +440,9 @@
     main .right-side .resume-section .skills .skill {
         height: 8px; 
     }
+    main .right-side .resume-section .skills {
+        margin-bottom: 30px;
+    }
     main .right-side .resume-section .download-button {
         padding: 0px 20px 20px 20px;
     }
