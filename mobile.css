@@ -187,12 +187,6 @@
         display: block;
         margin-top: 30px;
     }
-    .bouncing-container {
-        margin-bottom: 20px;
-    }
-    .bouncing-button {
-        font-size: 14px;
-    }
     /* ABOUT SECTION */
     main .right-side .about-section {
         padding: 20px;
@@ -314,12 +308,12 @@
 
     /* PROJECT DESCRIPTION MODAL */
     main .right-side .projects-section .modal-content {
-        margin: 10% auto;
-        padding: 20px;
+        margin: 20% auto;
+        padding: 20px 20px 50px 20px;
         width: 90%;
-        height: 90vh;
+        height: 80dvh;
         overflow-y: scroll;
-       z-index: 55;
+        z-index: 55;
     }
     main .right-side .projects-section .modal-content::-webkit-scrollbar {
         display: none;
@@ -833,7 +827,7 @@
         margin: 10% auto;
         padding: 20px;
         width: 85%;
-        height: 80dvh;
+        height: 70dvh;
         overflow-y: scroll;
     }
     main .right-side .projects-section .modal-content::-webkit-scrollbar {
