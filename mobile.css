@@ -689,6 +689,12 @@
         text-decoration: none;
         color: var(--highlight-color);
     }
+    main .toggle-theme {
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
     main .side-bar-mobile .sidebar-socials {
         margin-top: 50px;
         width: 180px;

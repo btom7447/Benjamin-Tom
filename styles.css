@@ -221,6 +221,7 @@ main .right-side {
     background-position-x: right;
     background-attachment: fixed;
     background-blend-mode: overlay;
+    position: relative;
 }
 main .right-side::-webkit-scrollbar {
     display: none;
