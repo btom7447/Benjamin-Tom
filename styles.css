@@ -408,13 +408,14 @@ main .right-side .about-section .about-container .about-right {
     width: 400px;
     height: fit-content;
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    flex-direction: row;
     justify-content: flex-start;
     align-items: flex-start;
     gap: 10px;
 }
 main .right-side .about-section .about-container .about-details {
-    width: 100%;
+    min-width: 330px;
     height: fit-content;
     display: flex;
     flex-direction: column;
@@ -438,7 +439,7 @@ main .right-side .about-section .about-container .about-details li .bold {
     margin-right: 5px;
 }
 main .know-more-buttons {
-    width: 100%;
+    /* width: 100%; */
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -785,6 +786,12 @@ main .right-side .resume-section-container .education-container {
     justify-content: flex-start;
     align-items: flex-start;
     gap: 30px;
+}
+main .right-side .education-header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 main .right-side .resume-section .education-container h3 {
     color: var(--primary-color-light);
