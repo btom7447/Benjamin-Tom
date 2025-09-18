@@ -35,7 +35,7 @@ a {
         opacity: 0;
     }
 }
-@keyframes shadow046 {
+/* @keyframes shadow046 {
     0% {
       transform: scaleX(1.5);
     }
@@ -64,7 +64,8 @@ a {
       top: 0%;
     }
 }  
-::selection {
+*/
+::selection { 
     background-color: var(--highlight-color);
     color: var(--primary-color-light);
 }

@@ -317,6 +317,37 @@
                     </p>
                 </div>
                 <div class="portfolio-container">
+                    <!-- Zayars Energy -->
+                    <div class="portfolio-item seventh" onclick="openModal('zayars-details')">
+                        <img class="desktop-image" src="images/zayar-inner-desktop.png" alt="Zayars Energy website thumbnail">
+                        <img class="mobile-image" src="images/zayar-inner-mobile.png" alt="Zayars Energy website thumbnail">
+                    </div>
+                    <!-- PROJECT MODAL -->
+                    <div id="zayars-details" class="modal"> 
+                        <div class="modal-content">
+                            <span class="close" onclick="document.getElementById('zayars-details').style.display = 'none'">&times;</span>
+                            <h4>Zayars Energy</h4>
+                            <div class="project-modal-description">
+                                <div class="project-description-left">
+                                    <img class="desktop-image" src="images/zayar-thumbnail-desktop.png" alt="Zayars Energy thumbnail">
+                                    <img class="mobile-image" src="images/zayar-thumbnail-mobile.png" alt="Zayars Energy thumbnail">
+                                </div>
+                                <div class="project-description-right">
+                                    <h5>Project Info:</h5>
+                                    <p>Zayar's Energy is a landing page for an elite brokerage service provider in crude oil, refined products, natural gas and renewables.</p>
+                                    <h5>Project Details:</h5>
+                                    <ul class="project-details">
+                                        <li><span class="bold">Client:</span>Zayars Energy</li>
+                                        <li><span class="bold">Industry:</span>Oil & Gas</li>
+                                        <li><span class="bold">Technologies:</span>JavaScript, Next.Js, Tailwind CSS</li>
+                                        <li><span class="bold">Date:</span>September, 2025</li>
+                                        <li><span class="bold">URL:</span><span class="highlight"><a href="https://zayars-energy.netlify.app/" target="_blank">https://zayars-energy.netlify.app/</a></span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                   
                     <!-- Awwal Fitness -->
                     <div class="portfolio-item seventh" onclick="openModal('awwal-details')">
                         <img class="desktop-image" src="images/awwal-cover-desktop.png" alt="Awwal fitness website thumbnail">
@@ -1531,7 +1562,7 @@
             </div>
             
             <!-- PRELOADER -->
-            <div class="overlay">
+            <!-- <div class="overlay">
                 <div class="wrapper">
                 <div class="circle"></div>
                 <div class="circle"></div>
@@ -1540,7 +1571,7 @@
                 <div class="shadow"></div>
                 <div class="shadow"></div>
                 </div>
-            </div>
+            </div> -->
 
         </section>
 
@@ -1860,14 +1891,14 @@
         </script>
 
         <!-- PRELOADER -->
-        <script>
+        <!-- <script>
             window.addEventListener('load', function() {
               setTimeout(function() {
                 document.querySelector('.wrapper').style.display = 'none';
                 document.querySelector('.overlay').style.display = 'none';
               }, 2200); 
             });
-        </script>
+        </script> -->
         
         <!-- CURSOR MOVEMENT -->
         <script>
